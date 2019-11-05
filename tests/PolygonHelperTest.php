@@ -3,7 +3,7 @@
 use League\Geotools\Polygon\Polygon;
 use Geometry\PolygonHelper;
 
-class PolygonTest extends PHPUnit_Framework_TestCase
+class PolygonHelperTest extends PHPUnit_Framework_TestCase
 {
 
     public function testContains()
