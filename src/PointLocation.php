@@ -76,10 +76,10 @@ class PointLocation
      * @param string $pointString
      * @return array
      */
-    function pointStringToCoordinates($pointString)
+    private static function pointStringToCoordinates($pointString)
     {
         $coordinates = explode(" ", $pointString);
-        return array("x" => $coordinates[0], "y" => $coordinates[1]);
+        return array("x" => (float)$coordinates[0], "y" => (float)$coordinates[1]);
     }
 
     /**
@@ -87,7 +87,7 @@ class PointLocation
      * @param array $vertices
      * @return bool
      */
-    function pointOnVertex($point, $vertices)
+    private static function pointOnVertex($point, $vertices)
     {
         foreach ($vertices as $vertex) {
             if ($point == $vertex) {
@@ -96,5 +96,4 @@ class PointLocation
         }
         return false;
     }
-
 }
