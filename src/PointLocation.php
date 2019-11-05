@@ -19,9 +19,16 @@ http://www.gnu.org/licenses/gpl.html
 
 class PointLocation
 {
-    var $pointOnVertex = true; // Check if the point sits exactly on one of the vertices?
+    /** @var bool */
+    private $pointOnVertex = true; // Check if the point sits exactly on one of the vertices?
 
-    function pointInPolygon($point, $polygon, $pointOnVertex = true)
+    /**
+     * @param string $point
+     * @param array $polygon
+     * @param bool $pointOnVertex
+     * @return string
+     */
+    public function pointInPolygon($point, $polygon, $pointOnVertex = true)
     {
         $this->pointOnVertex = $pointOnVertex;
 
@@ -65,12 +72,21 @@ class PointLocation
         }
     }
 
+    /**
+     * @param string $pointString
+     * @return array
+     */
     function pointStringToCoordinates($pointString)
     {
         $coordinates = explode(" ", $pointString);
         return array("x" => $coordinates[0], "y" => $coordinates[1]);
     }
 
+    /**
+     * @param string $point
+     * @param array $vertices
+     * @return bool
+     */
     function pointOnVertex($point, $vertices)
     {
         foreach ($vertices as $vertex) {
