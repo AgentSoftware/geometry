@@ -78,7 +78,7 @@ class PointLocation
                 return true;
             }
         }
-
+        return false;
     }
 
 }
