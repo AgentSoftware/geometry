@@ -19,8 +19,8 @@ http://www.gnu.org/licenses/gpl.html
 
 class PointLocation
 {
-    /** @var bool */
-    private $pointOnVertex = true; // Check if the point sits exactly on one of the vertices?
+    /** @var bool Check if the point sits exactly on one of the vertices? */
+    private $pointOnVertex = true;
 
     /**
      * @param string $point
